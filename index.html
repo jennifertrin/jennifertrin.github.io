@@ -1,286 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Personal Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: row;
-            gap: 40px;
-        }
-        
-        .left-section {
-            width: 35%;
-            position: sticky;
-            top: 40px;
-            align-self: flex-start;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .right-section {
-            width: 65%;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        
-        .photo-container {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 30px;
-            border: 4px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .photo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .name {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #333;
-            letter-spacing: -0.5px;
-            text-align: center;
-            width: 100%;
-            white-space: wrap;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            color: #666;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            text-align: center;
-            width: 100%;
-        }
-        
-        .dot {
-            margin: 0 10px;
-            color: #aaa;
-        }
-        
-        .tiles-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .tile {
-            border-radius: 20px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .tile:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .tile-header {
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #333;
-            letter-spacing: 0.5px;
-        }
-        
-        .tile-content {
-            padding: 25px;
-            background-color: white;
-            color: #555;
-            line-height: 1.7;
-            font-weight: 300;
-        }
-        
-        .developer {
-            background-color: #d8e2f3;
-        }
-        
-        .athlete {
-            background-color: #e0d8f3;
-        }
-        
-        .community {
-            background-color: #d8f3e6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Personal Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .social-links a:hover {
-            transform: translateY(-3px);
-            opacity: 0.9;
-        }
-        
-        .linkedin {
-            background-color: #0077b5;
-        }
-        
-        .twitter {
-            background-color: #1DA1F2;
-        }
-        
-        .farcaster {
-            background-color: #8A63D2;
-        }
-        
-        .github {
-            background-color: #333;
-        }
-        
-        .artizen {
-            background-color: #FF7043;
-        }
-        
-        @media (max-width: 900px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .left-section, .right-section {
-                width: 100%;
-            }
-            
-            .left-section {
-                position: relative;
-                top: 0;
-            }
-            
-            .name {
-                font-size: 2.2rem;
-            }
-            
-            .header {
-                padding: 20px 0;
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.left-section {
+    width: 40%;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-section {
+    width: 60%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.photo-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: center;
+    width: 100%;
+}
+
+.dot {
+    margin: 0 10px;
+    color: #aaa;
+}
+
+.tiles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tile {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tile-header {
+    height: auto;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.3;
+}
+
+.tile-content {
+    padding: 25px;
+    background-color: white;
+    color: #555;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.developer {
+    background-color: #d8e2f3;
+}
+
+.athlete {
+    background-color: #e0d8f3;
+}
+
+.community {
+    background-color: #d8f3e6;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.twitter {
+    background-color: #1DA1F2;
+}
+
+.farcaster {
+    background-color: #8A63D2;
+}
+
+.github {
+    background-color: #333;
+}
+
+.artizen {
+    background-color: #FF7043;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section, .right-section {
+        width: 100%;
+    }
+    
+    .left-section {
+        position: relative;
+        top: 0;
+    }
+    
+    .name {
+        font-size: 2rem;
+        white-space: normal;
+    }
+    
+    .header {
+        padding: 20px 0;
+        margin-bottom: 30px;
+    }
+    
+    .tile-header {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="left-section">
-            <div class="header">
-                <div class="photo-container">
-                    <img src="https://media.licdn.com/dms/image/v2/D5603AQE4uxHBLXJwMA/profile-displayphoto-shrink_800_800/B56ZbwMaZiH4Ac-/0/1747786508215?e=1753315200&v=beta&t=yI9G8t_PdDZ1jAXLATpsFi1vXNqZNF-uIZXCC_O54GM" alt="Your Photo">
-                </div>
-                <h1 class="name">Jennifer Tran</h1>
-                <div class="tagline">
-                    <a href="#developer">Developer</a> <span class="dot">•</span> <a href="#athlete">Athlete</a> <span class="dot">•</span> <a href="#community">Community Advocate</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/jennifertran-seattle/" class="linkedin" title="LinkedIn">
-                        ln
-                    </a>
-                    <a href="https://x.com/JKim_Tran" class="twitter" title="Twitter">
-                        x
-                    </a>
-                    <a href="https://warpcast.com/jennifertran" class="farcaster" title="Farcaster">
-                        f
-                    </a>
-                    <a href="https://github.com/jennifertrin" class="github" title="GitHub">
-                        gh
-                    </a>
-                    <a href="https://artizen.fund/index/mf/catalyst-fund-for-american-renewal" class="artizen" title="Artizen Fund">
-                        w
-                    </a>
-                </div>
+<div class="container">
+<div class="left-section">
+    <div class="header">
+        <div class="photo-container">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQE4uxHBLXJwMA/profile-displayphoto-shrink_800_800/B56ZbwMaZiH4Ac-/0/1747786508215?e=1753315200&v=beta&t=yI9G8t_PdDZ1jAXLATpsFi1vXNqZNF-uIZXCC_O54GM" alt="Your Photo">
+        </div>
+        <h1 class="name">Jennifer Kimberly Tran</h1>
+        <div class="tagline">
+            <a href="#developer">Developer</a> <span class="dot">•</span> <a href="#athlete">Athlete</a> <span class="dot">•</span> <a href="#community">Community Advocate</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jennifertran-seattle/" class="linkedin" title="LinkedIn">
+                ln
+            </a>
+            <a href="https://x.com/JKim_Tran" class="twitter" title="Twitter">
+                x
+            </a>
+            <a href="https://warpcast.com/jennifertran" class="farcaster" title="Farcaster">
+                f
+            </a>
+            <a href="https://github.com/jennifertrin" class="github" title="GitHub">
+                gh
+            </a>
+            <a href="https://artizen.fund/index/mf/catalyst-fund-for-american-renewal" class="artizen" title="Artizen Fund">
+                w
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="right-section">
+    <div class="tiles-container">
+        <div class="tile" id="developer">
+            <div class="tile-header developer">👩‍💻 Developer</div>
+            <div class="tile-content">
+                <p>I raised $1.7 million for an <a href="https://www.mintgate.io/">NFT marketplace startup</a> in 2021. The company no longer exists but it defines much of how I approach business, product development, and engineering.</p>
+                <br>
+                <p>I have worked in the blockchain industry in software engineering and developer relations roles since 2019.</p>
+                <br>
+                <p>I am most interested in blockchain, the intersection between AI and blockchain, and data engineering.</p>
+                <br>
+                <p>I also enjoy technical product marketing! Check out my <a href="https://earn.superteam.fun/t/jennifertran/">latest example X threads.</a></p>
             </div>
         </div>
         
-        <div class="right-section">
-            <div class="tiles-container">
-                <div class="tile" id="developer">
-                    <div class="tile-header developer">👩‍💻 Developer</div>
-                    <div class="tile-content">
-                        <p>I raised $1.7 million for an <a href="https://www.mintgate.io/">NFT marketplace startup</a> in 2021. The company no longer exists but it defines much of how I approach business, product development, and engineering.</p>
-                        <br>
-                        <p>I have worked in the blockchain industry in software engineering and developer relations roles since 2019.</p>
-                        <br>
-                        <p>I am most interested in blockchain, the intersection between AI and blockchain, and data engineering.</p>
-                        <br>
-                        <p>I also enjoy technical product marketing! Check out my <a href="https://earn.superteam.fun/t/jennifertran/">latest example X threads.</a></p>
-                    </div>
-                </div>
-                
-                <div class="tile" id="athlete">
-                    <div class="tile-header athlete">🏊🏋️‍♀️ Athlete</div>
-                    <div class="tile-content">
-                        <p>I'm an avid endurance athlete. I regularly swim with the <a href="https://orcaswimteam.org/">Orca Swim Team</a>, a U.S. Masters Swimming team that serves the Capitol Hill and West Seattle neighborhoods in Seattle, Washington, and supports LGBTQ+ and allies. I've participated in more than a <a href="https://www.usms.org/comp/meets/indresults.php?SwimmerID=MZ99C">dozen swim meets</a> including Regionals and Nationals for Masters swimmers. I primarily focus on breaststroke and distance (500yd+) events.</p>
-                        <br>
-                        <p>I also train in cardio and strength exercises at local <a href="https://www.seattleymca.org/">YMCAs in the Seattle area.</a></p>
-                    </div>
-                </div>
-                
-                <div class="tile" id="community">
-                    <div class="tile-header community">🗳️🇺🇸 Community Advocate</div>
-                    <div class="tile-content">
-                        <p>I'm passionate about public policy and sociology.</p>
-                        <br>
-                        <p>I constantly think about how our society is evolving and socioeconomic impacts. I credit this from my time at <a href="https://www.trincoll.edu/">Trinity College in Hartford, Connecticut,</a> where I graduated with a Bachelor's in Urban Studies and minors in Community Action and Science and Society.</p>
-                        <br>
-                        <p>I recently launched a <a href="https://artizen.fund/index/mf/catalyst-fund-for-american-renewal">grants initative</a> to help businesses based in small cities and rural areas in the United States.</p>
-                        <br>
-                        <p>I also serve as a Commissioner on the <a href="https://www.seattle.gov/womens-commission">Seattle Women's Commission</a>, where I explore the impacts of housing and reproductive policies on women.</p>
-                    </div>
-                </div>
+        <div class="tile" id="athlete">
+            <div class="tile-header athlete">🏊🏋️‍♀️ Athlete</div>
+            <div class="tile-content">
+                <p>I'm an avid endurance athlete. I regularly swim with the <a href="https://orcaswimteam.org/">Orca Swim Team</a>, a U.S. Masters Swimming team that serves the Capitol Hill and West Seattle neighborhoods in Seattle, Washington, and supports LGBTQ+ and allies. I've participated in more than a <a href="https://www.usms.org/comp/meets/indresults.php?SwimmerID=MZ99C">dozen swim meets</a> including Regionals and Nationals for Masters swimmers. I primarily focus on breaststroke and distance (500yd+) events.</p>
+                <br>
+                <p>I also train in cardio and strength exercises at local <a href="https://www.seattleymca.org/">YMCAs in the Seattle area.</a></p>
+            </div>
+        </div>
+        
+        <div class="tile" id="community">
+            <div class="tile-header community">🗳️🇺🇸 Community Advocate</div>
+            <div class="tile-content">
+                <p>I'm passionate about public policy and sociology.</p>
+                <br>
+                <p>I constantly think about how our society is evolving and socioeconomic impacts. I credit this from my time at <a href="https://www.trincoll.edu/">Trinity College in Hartford, Connecticut,</a> where I graduated with a Bachelor's in Urban Studies and minors in Community Action and Science and Society.</p>
+                <br>
+                <p>I recently launched a <a href="https://artizen.fund/index/mf/catalyst-fund-for-american-renewal">grants initative</a> to help businesses based in small cities and rural areas in the United States.</p>
+                <br>
+                <p>I also serve as a Commissioner on the <a href="https://www.seattle.gov/womens-commission">Seattle Women's Commission</a>, where I explore the impacts of housing and reproductive policies on women.</p>
             </div>
         </div>
     </div>
+</div>
+</div>
 </body>
 </html>
