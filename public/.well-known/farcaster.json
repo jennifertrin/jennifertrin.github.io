@@ -1,0 +1,25 @@
+{
+    "frame": {
+      "version": "1",
+      "name": "Jennifer Tran's Personal Website",
+      "description": "Jennifer Tran's personal website",
+      "iconUrl": "https://jennifertran.xyz/jtran32.png",
+      "homeUrl": "https://jennifertran.xyz",
+      "imageUrl": "https://jennifertran.xyz/jtran32.png",
+      "buttonTitle": "🚩 Start",
+      "splashImageUrl": "https://jennifertran.xyz/jtran32.png",
+      "splashBackgroundColor": "#f5f0ec",
+      "ogTitle": "Jennifer Tran's Personal Website",
+      "ogDescription": "Jennifer Tran's personal website",
+      "ogImageUrl": "https://jennifertran.xyz/jtran32.png",
+      "primaryCategory": "social",
+      "tags": [ 
+        "personal website",
+        "blockchain",
+        "software engineering",
+        "developer relations",
+        "athlete",
+        "community advocate"
+      ]
+    }
+  }
