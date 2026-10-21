@@ -34,6 +34,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--paper);
     color: var(--ink);
@@ -143,6 +147,45 @@ a {
 
 .resume:hover {
     background-color: var(--accent);
+}
+
+.actions {
+    display: inline-grid;
+    gap: 10px;
+}
+
+.actions a {
+    justify-content: space-between;
+}
+
+.work-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 19px;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.work-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+#selected-work {
+    scroll-margin-top: 40px;
+}
+
+.section-label a {
+    text-decoration: none;
+}
+
+.section-label a:hover {
+    color: var(--accent);
 }
 
 /* Content */
@@ -332,7 +375,10 @@ footer {
         <li><a href="https://substack.com/@realmscape">Substack</a></li>
         <li><a href="https://github.com/jennifertrin">GitHub</a></li>
     </ul>
-    <a href="Jennifer-Tran-Resume.pdf" class="resume" download>Download resume <span aria-hidden="true">↓</span></a>
+    <div class="actions">
+        <a href="Jennifer-Tran-Resume.pdf" class="resume" download>Download resume <span aria-hidden="true">↓</span></a>
+        <a href="#selected-work" class="work-link">Selected work <span aria-hidden="true">→</span></a>
+    </div>
 </header>
 
 <main>
@@ -346,8 +392,8 @@ footer {
         <p>I'm also building <a href="https://www.tryopenlane.com/">Openlane</a>, a performance analytics app for Masters swimmers, as a Masters swimmer myself! The app has grown to over 4,000 users and 15,000 page views within the Masters swimming community.</p>
     </section>
 
-    <section aria-labelledby="work-label">
-        <h2 class="section-label" id="work-label">Selected work</h2>
+    <section id="selected-work" aria-labelledby="work-label">
+        <h2 class="section-label" id="work-label"><a href="#selected-work">Selected work</a></h2>
         <ul class="work-list">
             <li class="work-item featured">
                 <a href="https://medium.com/@jkim_tran/why-is-ecdsa-not-quantum-resistant-eaf17dae4f89?sk=91dd5b3f2f7e43628a643d54677559f7">
